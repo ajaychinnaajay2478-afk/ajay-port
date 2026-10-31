@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Brain Spark - Puzzle Game</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="background">
+        <span>⭐</span>
+        <span>🧩</span>
+        <span>✨</span>
+        <span>🎮</span>
+        <span>🌈</span>
+        <span>💎</span>
+    </div>
+
+    <main class="game-container">
+
+        <header>
+            <div class="logo">🧩 Brain Spark</div>
+            <p class="subtitle">Think Fast. Solve Smart. Have Fun!</p>
+        </header>
+
+        <section id="home-screen" class="screen">
+            <div class="hero-icon">🧠</div>
+
+            <h1>Ready for the Challenge?</h1>
+
+            <p>
+                Explore 10 exciting levels filled with fun puzzles!
+                You have 30 seconds to answer each question.
+            </p>
+
+            <div class="feature-list">
+                <div>🎯 10 Levels</div>
+                <div>❓ 20 Questions per Level</div>
+                <div>⏱️ 30 Seconds per Question</div>
+            </div>
+
+            <button class="main-button" onclick="startGame()">
+                🚀 Start Game
+            </button>
+        </section>
+
+        <section id="game-screen" class="screen hidden">
+
+            <div class="top-info">
+                <div class="info-box">
+                    LEVEL <span id="level">1</span>/10
+                </div>
+
+                <div class="info-box">
+                    SCORE: <span id="score">0</span>
+                </div>
+            </div>
+
+            <div class="progress-area">
+                <div class="progress-text">
+                    Question <span id="question-number">1</span>/20
+                </div>
+
+                <div class="progress-track">
+                    <div id="progress-bar"></div>
+                </div>
+            </div>
+
+            <div class="timer-card">
+                <span>⏳ Time Remaining</span>
+                <div id="timer">30</div>
+            </div>
+
+            <div class="question-card">
+                <div id="category">🧩 Brain Puzzle</div>
+
+                <h2 id="question">What comes next?</h2>
+
+                <div id="options" class="options-grid"></div>
+
+                <p id="feedback"></p>
+            </div>
+
+            <button id="next-button" class="main-button hidden"
+                onclick="nextQuestion()">
+                Next Question ➜
+            </button>
+
+        </section>
+
+        <section id="result-screen" class="screen hidden">
+            <div class="hero-icon" id="result-icon">🏆</div>
+
+            <h1 id="result-title">Level Complete!</h1>
+
+            <p id="result-message"></p>
+
+            <div class="result-card">
+                <p>Correct Answers</p>
+                <h2 id="correct-count">0 / 20</h2>
+
+                <p>Your Score</p>
+                <h2 id="final-score">0</h2>
+            </div>
+
+            <button id="continue-button" class="main-button"
+                onclick="continueGame()">
+                Next Level 🚀
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        Made for curious minds 💜 | Brain Spark Puzzle Game
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
